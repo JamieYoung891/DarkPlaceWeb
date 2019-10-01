@@ -1,0 +1,49 @@
+/* font settings */
+
+@font-face {
+    font-family: NanumSquareRoundB;
+    src: url('../resources/NanumSquareRoundB.eot?#iefix') format('embedded-opentype'),
+        url('../resources/NanumSquareRoundB.woff') format('woff'),
+        url('../resources/NanumSquareRoundB.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: NanumSquareRoundR;
+    src: url('../resources/NanumSquareRoundR.eot?#iefix') format('embedded-opentype'),
+        url('../resources/NanumSquareRoundR.woff') format('woff'),
+        url('../resources/NanumSquareRoundR.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: NanumSquareRoundL;
+    src: url('../resources/NanumSquareRoundL.eot?#iefix') format('embedded-opentype'),
+        url('../resources/NanumSquareRoundL.woff') format('woff'),
+        url('../resources/NanumSquareRoundL.ttf') format('truetype');
+}
+
+
+
+body, html{
+    margin: 0;
+    padding: 0;
+
+    font-family: NanumSquareRoundL;
+    font-size: 4vw;
+    color: grey;
+
+    line-height: 6vw;
+    overflow: hidden;
+}
+
+article > div{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+h1{display: inline; color: white; font-size: inherit}
+
+em{font-style: normal; color: white; font-weight: bold}
+
+body, article, div, span, em{position: relative}
+
+/* span, em{display: inline-block}; */

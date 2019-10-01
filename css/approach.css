@@ -1,0 +1,114 @@
+.approaches{
+    position: absolute;
+    bottom: -100%;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: midnightblue;
+    color: white;
+
+    font-size: 5vmin;
+    line-height: 140%;
+
+    transition: 0.5s;
+
+    opacity: 0.5;
+}
+
+.approaches-wrapper{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
+
+    width: max-content;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.approach-world{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.approach-contents {margin-bottom: 6vmin;}
+.approach-contents:last-child{margin-bottom: 0}
+
+@media only screen and (orientation: portrait){
+    .approaches-wrapper{flex-direction: column}
+    .approaches-wrapper > .approach-world{margin-bottom: 14vmin}
+    .approaches-wrapper > .approach-world:last-child{margin-bottom: 0}
+    .approach-context{position: relative; top: -7vmin}
+    .approach-leave{position: relative; bottom: -7vmin;}
+}
+
+@media only screen and (orientation:landscape){
+    .approach-context{position: absolute; top: -14vmin}
+    .approach-leave{position: absolute; bottom: -7vmin}
+}
+
+.approach-item{width: max-content;}
+
+.approach-item:hover{text-decoration: line-through; cursor: pointer}
+
+.approach-context, .approach-leave{text-decoration: line-through}
+.approach-context:hover, .approach-leave:hover{text-decoration: none; cursor: pointer}
+
+.approach-button{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%) translateY(-100%);
+
+    font-size: 3vmin;
+    line-height: 4vmin;
+    padding-top: 2vmin;
+    padding-bottom: 2vmin;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+
+    background-color: midnightblue;
+    border-radius: 4vmin 4vmin 0 0 ;
+
+    transition: opacity 1s ease;
+
+    opacity: 0;
+}
+
+.close-button{
+    height: 8vmin;
+    width: 8vmin;
+    padding: 0;
+}
+.close-button::before, .close-button::after{
+    position: absolute;
+    right: 50%;
+
+    height: 5vmin;
+    width: 0.5vmin;
+    
+    content: "";
+    
+    background-color: white;
+}
+.close-button::after{transform: rotate(45deg)}
+.close-button::before{transform: rotate(-45deg)}
+
+.close-button{
+    position: fixed;
+    top: 1.5vmin;
+    right: 0;
+}
+.approach-close{
+    position: absolute;
+    top: unset;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/* .contents{transition: 0.5s;} */
+
+.button:hover{cursor: pointer}
